@@ -1,0 +1,46 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	margin-top: 40px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table th, table td {
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+table th {
+	background-color: #eee;
+}
+
+input[type="number"] {
+	width: 80px;
+}
+
+.chart, .table {
+	margin-top: 40px;
+}
+
+.chart canvas {
+	max-width: 500px;
+	margin: auto;
+}
+
+.table table {
+	margin: auto;
+}
+
+.chart, .table h3 {
+	text-align: center;
+}

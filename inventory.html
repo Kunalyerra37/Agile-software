@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inventory Management System</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Inventory Management System</h1>
+	
+	<h2>Current Inventory Levels</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Quantity Received</th>
+				<th>Quantity Used</th>
+				<th>Current Quantity</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Pen</td>
+				<td><input type="number" name="pen_received" min="0"></td>
+				<td><input type="number" name="pen_used" min="0"></td>
+				<td><span id="pen_quantity"></span></td>
+			</tr>
+			<tr>
+				<td>Pencil</td>
+				<td><input type="number" name="pencil_received" min="0"></td>
+				<td><input type="number" name="pencil_used" min="0"></td>
+				<td><span id="pencil_quantity"></span></td>
+			</tr>
+			<tr>
+				<td>Eraser</td>
+				<td><input type="number" name="eraser_received" min="0"></td>
+				<td><input type="number" name="eraser_used" min="0"></td>
+				<td><span id="eraser_quantity"></span></td>
+			</tr>
+			<tr>
+				<td>Books</td>
+				<td><input type="number" name="books_received" min="0"></td>
+				<td><input type="number" name="books_used" min="0"></td>
+				<td><span id="books_quantity"></span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Order Supplies</h2>
+	<form>
+		<label for="supplier_name">Supplier Name:</label>
+		<input type="text" name="supplier_name" required>
+		
+		<label for="item_name">Item:</label>
+		<select name="item_name" required>
+			<option value="">--Select--</option>
+			<option value="pen">Pen</option>
+			<option value="pencil">Pencil</option>
+			<option value="eraser">Eraser</option>
+			<option value="books">Books</option>
+		</select>
+		
+		<label for="quantity">Quantity:</label>
+		<input type="number" name="quantity" min="1" required>
+		
+		<button type="submit">Order</button>
+	</form>
+
+	<h2>Reports and Analytics</h2>
+	<div class="chart">
+		<h3>Inventory Levels</h3>
+		<canvas id="inventory_chart"></canvas>
+	</div>
+	<div class="table">
+		<h3>Usage by Item</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Quantity Used</th>
+					<th>Usage Rate</th>
+				</tr>
+			</thead>
+			<tbody>
+
